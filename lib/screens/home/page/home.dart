@@ -1,5 +1,6 @@
 import 'package:ecommerce_nahid/common/widgets/appbar.dart' show FAppBar;
 import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
 // import '../../../common/widget/appbar.dart';
 
 class Home extends StatelessWidget {
@@ -8,7 +9,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: FAppBar(title: "New Title", backButton: true),
+      appBar: FAppBar(title: "Mega Shop", backButton: true),
       body: Column(
         children: [
           // Poster Section
@@ -81,6 +82,27 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Iconsax.home_outline),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Iconsax.heart_outline),
+            label: "Wishlist",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Iconsax.shopping_bag_outline),
+            label: "Order",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Iconsax.user_add_bold),
+            label: "Accounts",
           ),
         ],
       ),
